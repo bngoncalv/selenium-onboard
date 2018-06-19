@@ -30,7 +30,6 @@ class CreateAccountPage < SitePrism::Page
   @@last_name = Faker::Name.name
 
   def fill_personal_information
-    wait_for_gender_radio_button
     gender_radio_button.click
     first_name_field.set(@@first_name)
     last_name_field.set(@@last_name)
